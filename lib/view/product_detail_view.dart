@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:onlineshop/model/product.dart';
 import 'package:animate_do/animate_do.dart';
-import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
+
 
 
 class ProductDetailView extends StatefulWidget {
@@ -112,7 +112,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                   child:
                   Container(
                   width: double.infinity,
-                  height: 350,
+                  height: 250,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image:
@@ -202,8 +202,8 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                               duration: const Duration(milliseconds: 800),
                               child:
                               //Html(data:"<p>Hello <b>Flutter</b><p>"),
-                              //Text(pr.description)
-                                HtmlWidget(pr.description)
+                              Text(pr.description)
+                                //HtmlWidget(pr.description)
 
                             )
                           ],

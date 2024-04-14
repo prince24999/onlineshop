@@ -59,7 +59,7 @@ class ProductItemView extends StatelessWidget {
                     Text(_title,
                       style: const TextStyle(
                           fontFamily: "cc",
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.normal,
                           color: Colors.white
                       ),
