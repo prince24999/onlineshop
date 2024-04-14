@@ -208,6 +208,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                             )
                           ],
                         ),
+
                         FadeInUp(
                             duration: const Duration(milliseconds: 800),
                             child: MaterialButton(
