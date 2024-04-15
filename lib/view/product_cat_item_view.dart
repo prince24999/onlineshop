@@ -18,13 +18,15 @@ class ProductCatItemView extends StatelessWidget{
   Widget build(BuildContext context) {
     String imageLink = category.url;
     String catName = category.name;
+    catName = catName.replaceFirst(catName[0], catName[0].toUpperCase());
+
     print('Cat name : $catName with Link : $imageLink');
     //Image img = Image.network(imageLink);
     return
       InkWell(
 
         onTap: () {
-          print("Tap to Category Item : ${category.name} with id : ${category.id}");
+          print("Tap to Category Item : $catName with id : ${category.id}");
           Navigator.of(context).push(
               MaterialPageRoute(builder: (context) => ProductListViewByCat(category: category,))
           );
@@ -63,7 +65,7 @@ class ProductCatItemView extends StatelessWidget{
                         child:
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                          child: Text(category.name,
+                          child: Text(catName,
                             style: const TextStyle(
                                 fontFamily: "cc",
                                 fontSize: 16,
