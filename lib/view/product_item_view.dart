@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:onlineshop/view/product_detail_view.dart';
 
-import '../model/product.dart';
+import '../model/pr.dart';
+
 
 class ProductItemView extends StatelessWidget {
 
-  Product product;
+  Pr product;
   Color titleColor;
 
   ProductItemView({super.key, required this.product, required this.titleColor});
@@ -48,10 +49,6 @@ class ProductItemView extends StatelessWidget {
                   width: 300,
                   fit: BoxFit.cover,
                 ),
-                // Image.network(_imageLink,fit: BoxFit.cover,
-                //   height: 150,
-                //   width: 300,
-                // ),
                 Positioned(
                   bottom: 0,
                   child: Padding(

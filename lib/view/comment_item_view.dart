@@ -1,39 +1,35 @@
-// SINGLE PRODUCT CATEGORY ITEM IN LIST VIEW
+// SINGLE PRODUCT ITEM VIEW IN LIST
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:onlineshop/view/pr_list_view_from_cat.dart';
+import 'package:flutter/widgets.dart';
+import 'package:onlineshop/model/comment.dart';
+import 'package:onlineshop/view/product_detail_view.dart';
 
-import '../model/product_cat.dart';
-import 'product_list_view_by_category.dart';
+class CommentItemView extends StatelessWidget {
 
+  Comment comment;
+  Color titleColor;
 
-
-class ProductCatItemView extends StatelessWidget{
-
-  ProductCat category;
-  ProductCatItemView({super.key, required this.category});
+  CommentItemView({super.key, required this.comment, required this.titleColor});
 
 
   @override
   Widget build(BuildContext context) {
-    String imageLink = category.url;
-    String catName = category.name;
-    catName = catName.replaceFirst(catName[0], catName[0].toUpperCase());
 
-    print('Cat name : $catName with Link : $imageLink');
-    //Image img = Image.network(imageLink);
+    //String _imageLink = product.body;
+    String _title = comment.name;
+    String _des = comment.body;
+
     return
-      InkWell(
 
-        onTap: () {
-          print("Tap to Category Item : $catName with id : ${category.id}");
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => PrListView(category: category))
-          );
+      InkWell(
+        onTap: () => {
+
+          // Navigator.of(context).push(
+          //     MaterialPageRoute(builder: (context) => ProductDetailView(comment,titleColor)))
         },
         child:
-
         Scaffold(
           body:
           //Text(_title)
@@ -44,20 +40,13 @@ class ProductCatItemView extends StatelessWidget{
 
             Stack(
                 children: [
-
-                  FadeInImage.assetNetwork(
-                    placeholder: 'assets/images/loading.gif',
-                    image: imageLink,
-                    height: 150,
-                    width: 300,
-                    fit: BoxFit.cover,
-                  ),
-
-                  // Image.network(imageLink,fit: BoxFit.cover,
+                  // FadeInImage.assetNetwork(
+                  //   placeholder: 'assets/images/loading.gif',
+                  //   image: _imageLink,
                   //   height: 150,
                   //   width: 300,
-                  // )
-
+                  //   fit: BoxFit.cover,
+                  // ),
                   Positioned(
                     bottom: 0,
                     child: Padding(
@@ -70,14 +59,14 @@ class ProductCatItemView extends StatelessWidget{
 
                         width: 300,
                         height: 45,
-                        color: category.color.withOpacity(0.7),
+                        color: titleColor.withOpacity(0.7),
                         child:
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                          child: Text(catName,
+                          padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                          child: Text(_title,
                             style: const TextStyle(
                                 fontFamily: "cc",
-                                fontSize: 16,
+                                fontSize: 14,
                                 fontWeight: FontWeight.normal,
                                 color: Colors.white
                             ),
@@ -91,8 +80,8 @@ class ProductCatItemView extends StatelessWidget{
 
           ),
         ),
-
       );
+
   }
 
 }
