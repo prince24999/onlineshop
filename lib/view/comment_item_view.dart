@@ -13,7 +13,6 @@ class CommentItemView extends StatelessWidget {
 
   CommentItemView({super.key, required this.comment, required this.titleColor});
 
-
   @override
   Widget build(BuildContext context) {
 
