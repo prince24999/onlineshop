@@ -1,59 +1,40 @@
 import 'dart:convert';
-import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import '../model/comment.dart';
-import '../model/pr.dart';
-
+import '../model/product.dart';
+import '../model/raw_product.dart';
 
 class NetworkRequest {
+  static String productToJson(List<Product> data) =>
+      json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-  static List<Pr> prFromJson(String str) => List<Pr>.from(json.decode(str).map((x) => Pr.fromJson(x)));
+  static Future<List<Product>> fetchProduct(String urlProductFromCat) async {
+    final response = await http
+        .get(Uri.parse('https://dummyjson.com/products/category/smartphones'));
 
-  static List<Pr> listPrParse(String responsebody){
-    var list = json.decode(responsebody) as List<dynamic>;
-    List<Pr> prs = list.map((model) => Pr.fromJson(model)).toList();
-    return prs;
-  }
-
-  static Future<List<Pr>> fetchPr(String urlProductFromCat) async
-  {
-    final response = await http.get(Uri.parse(urlProductFromCat));
-
-    if(response.statusCode == 200)
-    {
-      //return prFromJson(response.body);
-      return compute(listPrParse,response.body);
-    }
-    else if (response.statusCode == 404)
-    {
+    if (response.statusCode == 200) {
+      //print(response.body);
+      final rawProduct data = rawProduct.fromJson(response.body);
+      final listProductData = data.products;
+      final List<Product> listProduct = listProductData
+          .map((e) => Product(
+          id: e['id'] as int,
+          title: e['title'] as String,
+          description: e['description'] as String,
+          price: e['price'] as int,
+          discountPercentage: e['discountPercentage'] as double,
+          rating: e['rating'] as double,
+          stock: e['stock'] as int,
+          brand: e['brand'] as String,
+          category: e['category'] as String,
+          thumbnail: e['thumbnail'] as String,
+          images: e['images']?.cast<String>()))
+          .toList();
+      print(listProduct);
+      return listProduct;
+    } else if (response.statusCode == 404) {
       throw Exception('Not found');
-    }
-    else
-    {
+    } else {
       throw Exception('Cannot get data');
     }
   }
-
-  static List<Comment> commentFromJson(String str) => List<Comment>.from(json.decode(str).map((x) => Comment.fromJson(x)));
-
-  static Future<List<Comment>> fetchComment(String url) async
-  {
-    final response = await http.get(Uri.parse(url));
-
-    if(response.statusCode == 200)
-    {
-      return commentFromJson(response.body);
-
-    }
-    else if (response.statusCode == 404)
-    {
-      throw Exception('Not found');
-    }
-    else
-    {
-      throw Exception('Cannot get data');
-    }
-  }
-  
-
 }

@@ -23,7 +23,7 @@ class ProductListViewByCat extends StatelessWidget {
     print(imageLink);
 
     List<Product> filterProducts = FAKE_PRODUCTS.where((product) =>
-    product.catid == category.id).toList();
+    product.category == category.name).toList();
 
 
     return Scaffold(

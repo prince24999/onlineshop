@@ -1,14 +1,11 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:onlineshop/network/networkrequest.dart';
 import 'package:onlineshop/view/product_item_view.dart';
-import '../model/comment.dart';
-import '../model/pr.dart';
+import '../model/product.dart';
 import '../model/product_cat.dart';
-import 'comment_item_view.dart';
+
 
 class PrListView extends StatefulWidget {
   final ProductCat category;
@@ -25,7 +22,7 @@ class PrListViewState extends State<PrListView>{
 
 
 
-  late List<Comment> comments;
+  late List<Product> products;
 
   // final ProductCat category;
   // String imageLink = category.url;
@@ -37,13 +34,13 @@ class PrListViewState extends State<PrListView>{
   void initState() {
     // TODO: implement initState
     super.initState();
-    NetworkRequest.fetchComment("https://jsonplaceholder.typicode.com/comments").then((datafromserver) =>
+    NetworkRequest.fetchProduct("").then((datafromserver) =>
     {
       setState(() {
 
-        comments = datafromserver;
+        products = datafromserver;
         print('///////////////////////////////////////////////////////////////////////////');
-        print(comments);
+        print(products);
       })
     });
   }
@@ -73,7 +70,7 @@ class PrListViewState extends State<PrListView>{
                     mainAxisSpacing: 10
                 ),
                 children:
-                comments.map((e) => CommentItemView(comment: e, titleColor: Colors.blue,)).toList()
+                products.map((e) => ProductItemView(product: e, titleColor: Colors.blue,)).toList()
 
 
             )

@@ -3,12 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 
-import '../model/pr.dart';
+import '../model/product.dart';
+
 
 
 
 class ProductDetailView extends StatefulWidget {
-  final Pr p;
+  final Product p;
   final Color titleColor;
 
   const ProductDetailView(this.p, this.titleColor);
@@ -18,7 +19,7 @@ class ProductDetailView extends StatefulWidget {
 }
 
 class _ProductDetailViewState extends State<ProductDetailView> {
-  Pr pr;
+  Product pr;
   Color c;
   //List<String> lProductImages = pr.images;
   _ProductDetailViewState({required this.pr, required this.c});

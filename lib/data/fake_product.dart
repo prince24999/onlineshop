@@ -5,7 +5,7 @@ import '../model/product.dart';
 List<Product> FAKE_PRODUCTS = [
   Product(
       id: 1,
-      catid: 1,
+      
       title: "iPhone 9",
       description: "An apple mobile which is nothing like apple",
       price: 549,
@@ -25,7 +25,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 2,
-      catid: 1,
+      
       title: "iPhone X",
       description: "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
       price: 899,
@@ -44,7 +44,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 3,
-      catid: 1,
+      
       title: "Samsung Universe 9",
       description: "Samsung's new variant which goes beyond Galaxy to the Universe",
       price: 1249,
@@ -60,7 +60,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 4,
-      catid: 1,
+      
       title: "OPPOF19",
       description: "OPPO F19 is officially announced on April 2021.",
       price: 280,
@@ -80,7 +80,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 5,
-      catid: 1,
+      
       title: "Huawei P30",
       description: "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
       price: 499,
@@ -98,7 +98,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 6,
-      catid: 2,
+      
       title: "MacBook Pro",
       description: "MacBook Pro 2021 with mini-LED display may launch between September, November",
       price: 1749,
@@ -117,7 +117,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 7,
-      catid: 2,
+      
       title: "Samsung Galaxy Book",
       description: "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
       price: 1499,
@@ -136,7 +136,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 8,
-      catid: 2,
+      
       title: "Microsoft Surface Laptop 4",
       description: "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
       price: 1499,
@@ -156,7 +156,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 9,
-      catid: 2,
+      
       title: "Infinix INBOOK",
       description: "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
       price: 1099,
@@ -176,7 +176,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 10,
-      catid: 2,
+      
       title: "HP Pavilion 15-DK1056WM",
       description: "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
       price: 1099,
@@ -195,7 +195,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 11,
-      catid: 3,
+      
       title: "perfume Oil",
       description: "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
       price: 13,
@@ -214,7 +214,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 12,
-      catid: 3,
+      
       title: "Brown Perfume",
       description: "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
       price: 40,
@@ -234,7 +234,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 13,
-      catid: 3,
+      
       title: "Fog Scent Xpressio Perfume",
       description: "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
       price: 13,
@@ -254,7 +254,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 14,
-      catid: 3,
+      
       title: "Non-Alcoholic Concentrated Perfume Oil",
       description: "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
       price: 120,
@@ -273,7 +273,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 15,
-      catid: 3,
+      
       title: "Eau De Perfume Spray",
       description: "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
       price: 30,
@@ -293,7 +293,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 16,
-      catid: 4,
+      
       title: "Hyaluronic Acid Serum",
       description: "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
       price: 19,
@@ -313,7 +313,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 17,
-      catid: 4,
+      
       title: "Tree Oil 30ml",
       description: "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
       price: 12,
@@ -332,7 +332,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 18,
-      catid: 4,
+      
       title: "Oil Free Moisturizer 100ml",
       description: "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
       price: 40,
@@ -352,7 +352,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 19,
-      catid: 4,
+      
       title: "Skin Beauty Serum.",
       description: "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
       price: 46,
@@ -371,7 +371,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 20,
-      catid: 4,
+      
       title: "Freckle Treatment Cream- 15gm",
       description: "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
       price: 70,
@@ -391,7 +391,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 21,
-      catid: 5,
+      
       title: "- Daal Masoor 500 grams",
       description: "Fine quality Branded Product Keep in a cool and dry place",
       price: 20,
@@ -409,7 +409,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 22,
-      catid: 5,
+      
       title: "Elbow Macaroni - 400 gm",
       description: "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
       price: 14,
@@ -427,7 +427,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 23,
-      catid: 5,
+      
       title: "Orange Essence Food Flavou",
       description: "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
       price: 14,
@@ -447,7 +447,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 24,
-      catid: 5,
+      
       title: "cereals muesli fruit nuts",
       description: "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
       price: 46,
@@ -467,7 +467,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 25,
-      catid: 5,
+      
       title: "Gulab Powder 50 Gram",
       description: "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
       price: 70,
@@ -487,7 +487,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 26,
-      catid: 6,
+      
       title: "Plant Hanger For Home",
       description: "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
       price: 41,
@@ -508,7 +508,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 27,
-      catid: 6,
+      
       title: "Flying Wooden Bird",
       description: "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
       price: 51,
@@ -528,7 +528,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 28,
-      catid: 6,
+      
       title: "3D Embellishment Art Lamp",
       description: "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
       price: 20,
@@ -548,7 +548,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 29,
-      catid: 6,
+      
       title: "Handcraft Chinese style",
       description: "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
       price: 60,
@@ -568,7 +568,7 @@ List<Product> FAKE_PRODUCTS = [
   ),
   Product(
       id: 30,
-      catid: 6,
+      
       title: "Key Holder",
       description: "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
       price: 30,

@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:onlineshop/view/product_detail_view.dart';
 
-import '../model/pr.dart';
+import '../model/product.dart';
 
 
 class ProductItemView extends StatelessWidget {
 
-  Pr product;
+  Product product;
   Color titleColor;
 
   ProductItemView({super.key, required this.product, required this.titleColor});
