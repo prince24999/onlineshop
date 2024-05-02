@@ -2,10 +2,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:onlineshop/view/pr_list_view_from_cat.dart';
+import 'package:onlineshop/view/product_list_view_from_cat.dart';
 
 import '../model/product_cat.dart';
-import 'product_list_view_by_category.dart';
+
 
 
 
@@ -29,7 +29,7 @@ class ProductCatItemView extends StatelessWidget{
         onTap: () {
           print("Tap to Category Item : $catName with id : ${category.id}");
           Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => PrListView(category: category))
+              MaterialPageRoute(builder: (context) => ProductListView(category: category))
           );
         },
         child:

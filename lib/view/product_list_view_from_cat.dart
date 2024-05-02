@@ -6,25 +6,25 @@ import '../model/product.dart';
 import '../model/product_cat.dart';
 
 
-class PrListView extends StatefulWidget {
+class ProductListView extends StatefulWidget {
   final ProductCat category;
 
 
-  const PrListView({super.key, required this.category});
+  const ProductListView({super.key, required this.category});
 
   @override
-  PrListViewState createState() => PrListViewState(cat: category);
+  ProductListViewState createState() => ProductListViewState(cat: category);
 
 }
 
-class PrListViewState extends State<PrListView>{
+class ProductListViewState extends State<ProductListView>{
 
   late List<Product> products;
   bool isLoading = true;
   ProductCat cat;
 
 
-  PrListViewState({required this.cat});
+  ProductListViewState({required this.cat});
 
   @override
   void initState() {
@@ -68,10 +68,10 @@ class PrListViewState extends State<PrListView>{
         body:
         AlertDialog(
             content: Row(children: [
-              CircularProgressIndicator(
+              const CircularProgressIndicator(
               backgroundColor: Colors.red,
             ),
-            Container(margin: EdgeInsets.only(left: 7), child: Text("Loading...")),
+            Container(margin: const EdgeInsets.only(left: 7), child: const Text("Loading...")),
           ]),
           )
         );
