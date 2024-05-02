@@ -4,12 +4,14 @@ import '../model/product.dart';
 import '../model/raw_product.dart';
 
 class NetworkRequest {
+  static const String baseProductOfCat = 'https://dummyjson.com/products/category/';
+
   static String productToJson(List<Product> data) =>
       json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-  static Future<List<Product>> fetchProduct(String urlProductFromCat) async {
+  static Future<List<Product>> fetchProduct(String catname) async {
     final response = await http
-        .get(Uri.parse('https://dummyjson.com/products/category/smartphones'));
+        .get(Uri.parse(baseProductOfCat + catname));
 
     if (response.statusCode == 200) {
       //print(response.body);
