@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:onlineshop/view/product_list_view_from_cat.dart';
-
+import 'package:cached_network_image/cached_network_image.dart';
 import '../model/product_cat.dart';
 
 
@@ -39,7 +39,7 @@ class ProductCatItemView extends StatelessWidget{
           //Text(_title)
 
           Card(
-            clipBehavior: Clip.antiAlias,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
             child:
 
             Stack(
@@ -51,13 +51,14 @@ class ProductCatItemView extends StatelessWidget{
                     height: 150,
                     width: 300,
                     fit: BoxFit.cover,
-                  ),
+                  )
+
 
                   // Image.network(imageLink,fit: BoxFit.cover,
                   //   height: 150,
                   //   width: 300,
                   // )
-
+                  ,
                   Positioned(
                     bottom: 0,
                     child: Padding(
