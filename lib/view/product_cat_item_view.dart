@@ -39,7 +39,7 @@ class ProductCatItemView extends StatelessWidget{
           //Text(_title)
 
           Card(
-            clipBehavior: Clip.antiAlias,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
             child:
 
             Stack(
