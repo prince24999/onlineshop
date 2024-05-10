@@ -4,20 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:onlineshop/view/product_list_view_from_cat.dart';
 import '../data/fake_product_cat.dart';
 import 'product_cat_item_view.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 
 class ProductCatListView extends StatelessWidget{
   const ProductCatListView({super.key});
 
+
+
+  bool get wantKeepAlive => true;
+
   @override
   Widget build(BuildContext context) {
     final orientation = MediaQuery.of(context).orientation;
+
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
 
-          backgroundColor: Colors.blue.withOpacity(0.7),
+          backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
           centerTitle: true,
           title: const Text("Product's Categories"),
@@ -41,13 +48,15 @@ class ProductCatListView extends StatelessWidget{
           // ),
 
           GridView.builder(
+            addAutomaticKeepAlives: true,
             itemCount: FAKE_PRODUCT_CAT.length,
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 300,
-                  mainAxisExtent: 150,
-                  childAspectRatio: 2/1,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10
+
+                  mainAxisExtent: 130,
+                  childAspectRatio: 1,
+                  crossAxisSpacing: 5,
+                  mainAxisSpacing: 5
               ),
             itemBuilder: (BuildContext context, int index) {
               return
@@ -59,7 +68,8 @@ class ProductCatListView extends StatelessWidget{
                   );
                 },
 
-                  child: Scaffold(
+                  child:
+                  Scaffold(
                     body:
                     //Text(_title)
 
@@ -69,11 +79,11 @@ class ProductCatListView extends StatelessWidget{
 
                       Stack(
                           children: [
-
+                            //Image.network(FAKE_PRODUCT_CAT[index].url)
                             FadeInImage.assetNetwork(
                               placeholder: 'assets/images/loading.gif',
                               image: FAKE_PRODUCT_CAT[index].url,
-                              height: 150,
+                              height: 130,
                               width: 300,
                               fit: BoxFit.cover,
                             )
@@ -89,8 +99,8 @@ class ProductCatListView extends StatelessWidget{
                                   alignment: Alignment.centerLeft,
 
                                   width: 300,
-                                  height: 45,
-                                  color: FAKE_PRODUCT_CAT[index].color.withOpacity(0.7),
+                                  height: 30,
+                                  color: FAKE_PRODUCT_CAT[index].color,
                                   child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                                       child: Text(FAKE_PRODUCT_CAT[index].name
@@ -111,7 +121,7 @@ class ProductCatListView extends StatelessWidget{
                       ),
 
                     ),
-                  ),
+                  )
                 );
             },
           ),

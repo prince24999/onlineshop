@@ -60,7 +60,7 @@ class ProductListViewState extends State<ProductListView>{
   {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: cat.color.withOpacity(0.7),
+          backgroundColor: cat.color,
           foregroundColor: Colors.white,
           centerTitle: true,
           title: Text(cat.name),
@@ -82,7 +82,7 @@ class ProductListViewState extends State<ProductListView>{
   {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: cat.color.withOpacity(0.7),
+          backgroundColor: cat.color,
           foregroundColor: Colors.white,
           centerTitle: true,
           title: Text(cat.name),
