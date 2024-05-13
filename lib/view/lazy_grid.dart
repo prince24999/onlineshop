@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:onlineshop/model/product_cat.dart';
 import 'package:onlineshop/view/product_cat_item_view.dart';
-
 import '../data/fake_product_cat.dart';
-
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
