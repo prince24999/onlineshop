@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../model/product_cat.dart';
 
 List<ProductCat> FAKE_PRODUCT_CAT = [
-  ProductCat(color: Colors.black,id: 1, name: "smartphones", url: "https://news.am/img/news/69/63/89/default.jpg"),
+  ProductCat(color: Colors.black,id: 1, name: "smartphones", url: "https://businesstech.co.za/news/wp-content/uploads/2013/02/Smartphone-Featurephone.jpg"),
   ProductCat(color: Colors.blueGrey,id: 2, name: "laptops", url: "https://media.product.which.co.uk/prod/images/pr_4to3_400x300/22a475e555d7-best-laptop-deals.jpg"),
   ProductCat(color: Colors.pinkAccent,id: 3, name: "fragrances", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkDVBQBrpaaiyDKeh9x-2fqNQONyYnYvQj1I73oViOFA&s"),
   ProductCat(color: Colors.cyan,id: 4, name: "skincare", url: "https://static.toiimg.com/thumb/msid-103956675,width-400,resizemode-4/103956675.jpg"),
@@ -23,3 +23,8 @@ List<ProductCat> FAKE_PRODUCT_CAT = [
   ProductCat(color: Colors.black,id: 19, name: "motorcycle", url: "https://www.whateverwheels.co.uk/smsimg/173/13308-21205-list-smartselect_20180731-002634_photos-173.jpg"),
   ProductCat(color: Colors.brown,id: 20, name: "lighting", url: "https://d26zy8eawpuu2c.cloudfront.net/wp-content/uploads/2014/07/After_1.gif")
 ];
+
+Future<List<ProductCat>> getCatsFromServer({required int page, required int limit}) async {
+  if (limit <= 0) return [];
+  return FAKE_PRODUCT_CAT.skip((page - 1) * limit).take(limit).toList();
+}

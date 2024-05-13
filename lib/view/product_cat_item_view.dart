@@ -48,8 +48,8 @@ class ProductCatItemView extends StatelessWidget{
                   FadeInImage.assetNetwork(
                     placeholder: 'assets/images/loading.gif',
                     image: imageLink,
-                    height: 150,
-                    width: 300,
+                    height: 170,
+                    width: 200,
                     fit: BoxFit.cover,
                   )
 
@@ -69,8 +69,8 @@ class ProductCatItemView extends StatelessWidget{
                       Container(
                         alignment: Alignment.centerLeft,
 
-                        width: 300,
-                        height: 45,
+                        width: 200,
+                        height: 42,
                         color: category.color.withOpacity(0.7),
                         child:
                         Padding(

@@ -39,7 +39,7 @@ dependencies:
   animate_do: ^3.3.4
   http: ^1.2.1
   cached_network_image: ^3.3.1
-  flutter_staggered_grid_view: ^0.7.0
+
 
 
 dev_dependencies:
@@ -67,7 +67,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
       - assets/images/loading.gif
-  #   - images/a_dot_ham.jpeg
+      - assets/images/sp.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
