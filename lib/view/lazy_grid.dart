@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final ScrollController _controller = ScrollController();
 
-  List<ProductCat> _cats = [];
+  final List<ProductCat> _cats = [];
   int _nextPage = 1;
   bool _loading = true;
   bool _canLoadMore = true;

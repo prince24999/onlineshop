@@ -12,7 +12,8 @@ class ProductDetailView extends StatefulWidget {
   final Product p;
   final Color titleColor;
 
-  const ProductDetailView(this.p, this.titleColor);
+  const ProductDetailView(this.p, this.titleColor, {super.key});
+  @override
   _ProductDetailViewState createState() {
     return _ProductDetailViewState(pr: p, c: titleColor);
   }

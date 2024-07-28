@@ -1,9 +1,7 @@
 // SINGLE PRODUCT CATEGORY ITEM IN LIST VIEW
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:onlineshop/view/product_list_view_from_cat.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import '../model/product_cat.dart';
 
 

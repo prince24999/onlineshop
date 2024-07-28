@@ -1,8 +1,6 @@
 // SINGLE PRODUCT ITEM VIEW IN LIST
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:onlineshop/view/product_detail_view.dart';
 
 import '../model/product.dart';
@@ -19,9 +17,9 @@ class ProductItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    String _imageLink = product.thumbnail;
-    String _title = product.title;
-    String _des = product.description;
+    String imageLink = product.thumbnail;
+    String title = product.title;
+    String des = product.description;
 
     return
 
@@ -44,7 +42,7 @@ class ProductItemView extends StatelessWidget {
               children: [
                 FadeInImage.assetNetwork(
                   placeholder: 'assets/images/loading.gif',
-                  image: _imageLink,
+                  image: imageLink,
                   height: 150,
                   width: 300,
                   fit: BoxFit.cover,
@@ -65,7 +63,7 @@ class ProductItemView extends StatelessWidget {
                       child:
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
-                        child: Text(_title,
+                        child: Text(title,
                           style: const TextStyle(
                               fontFamily: "cc",
                               fontSize: 14,

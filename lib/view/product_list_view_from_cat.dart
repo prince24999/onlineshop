@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:onlineshop/network/networkrequest.dart';
 import 'package:onlineshop/view/product_item_view.dart';
