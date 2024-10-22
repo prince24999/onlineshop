@@ -1,6 +1,6 @@
 # onlineshop
 
-A new Flutter project.
+Flutter onlineshop
 
 ## Getting Started
 
