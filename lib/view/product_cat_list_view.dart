@@ -52,24 +52,24 @@ class ProductCatListView extends StatelessWidget{
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 300, // width
 
-                  mainAxisExtent: 350, // height
+                  mainAxisExtent: 250, // height
                   childAspectRatio: 1,
                   crossAxisSpacing: 5,
                   mainAxisSpacing: 5
               ),
             itemBuilder: (BuildContext context, int index) {
               return
-                InkWell(
-                    onTap: () {
-                  //print("Tap to Category Item : $FAKE_PRODUCT_CAT[index].name with id : ${category.id}");
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => ProductListView(category: FAKE_PRODUCT_CAT[index]))
-                  );
-                },
-
-                  child:
-                  Scaffold(
-                    body:
+                // InkWell(
+                //     onTap: () {
+                //   //print("Tap to Category Item : $FAKE_PRODUCT_CAT[index].name with id : ${category.id}");
+                //   Navigator.of(context).push(
+                //       MaterialPageRoute(builder: (context) => ProductListView(category: FAKE_PRODUCT_CAT[index]))
+                //   );
+                // },
+                //
+                //   child:
+                //   Scaffold(
+                //     body:
                     //Text(_title)
                     Card(
                       clipBehavior: Clip.antiAlias,
@@ -79,7 +79,7 @@ class ProductCatListView extends StatelessWidget{
                           FadeInImage.assetNetwork(
                             placeholder: 'assets/images/loading.gif',
                             image: FAKE_PRODUCT_CAT[index].url,
-                            height: 300,
+                            height: 200,
                             width: 300,
                             fit: BoxFit.cover,
                           )
@@ -120,12 +120,12 @@ class ProductCatListView extends StatelessWidget{
                           )
                         ],
                       ),
-                    )
+                    );
 
                             //Image.network(FAKE_PRODUCT_CAT[index].url)
 
-                  )
-                );
+                 // );
+               // );
             },
           ),
 

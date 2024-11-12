@@ -18,7 +18,6 @@ List<ProductCat> FAKE_PRODUCT_CAT = [
   ProductCat(color: Colors.orange,id: 14, name: "womens-watches", url: "https://i.pinimg.com/474x/af/81/9d/af819de06f6cd919b8f463e664f2b542.jpg"),
   ProductCat(color: Colors.pink,id: 15, name: "womens-bags", url: "https://m.media-amazon.com/images/I/61hGMu2+2WL._AC_UY300_.jpg"),
   ProductCat(color: Colors.deepPurpleAccent,id: 16, name: "womens-jewellery", url: "https://static.toiimg.com/thumb/msid-68993072,width-400,resizemode-4/68993072.jpg"),
-  ProductCat(color: Colors.lightBlue,id: 17, name: "sunglasses", url: "https://dollger.com/cdn/shop/articles/IMG_202311085859_400x300_90acc99a-a159-440a-b9f1-7189e5f7ad86.jpg?v=1699408878&width=2048"),
   ProductCat(color: Colors.grey,id: 18, name: "automotive", url: "https://dm.henkel-dam.com/is/image/henkel/closeup-white-concept-car-interior-future-design"),
   ProductCat(color: Colors.black,id: 19, name: "motorcycle", url: "https://www.whateverwheels.co.uk/smsimg/173/13308-21205-list-smartselect_20180731-002634_photos-173.jpg"),
   ProductCat(color: Colors.brown,id: 20, name: "lighting", url: "https://d26zy8eawpuu2c.cloudfront.net/wp-content/uploads/2014/07/After_1.gif")

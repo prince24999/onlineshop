@@ -22,18 +22,18 @@ class ProductCatItemView extends StatelessWidget{
     print('Cat name : $catName with Link : $imageLink');
     //Image img = Image.network(imageLink);
     return
-      InkWell(
+      // InkWell(
+      //
+      //   onTap: () {
+      //     print("Tap to Category Item : $catName with id : ${category.id}");
+      //     Navigator.of(context).push(
+      //         MaterialPageRoute(builder: (context) => ProductListView(category: category))
+      //     );
+      //   },
+      //   child:
 
-        onTap: () {
-          print("Tap to Category Item : $catName with id : ${category.id}");
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => ProductListView(category: category))
-          );
-        },
-        child:
-
-        Scaffold(
-          body:
+        // Scaffold(
+        //   body:
           //Text(_title)
 
           Card(
@@ -88,10 +88,10 @@ class ProductCatItemView extends StatelessWidget{
                 ]
             ),
 
-          ),
-        ),
+          );
+        //);
 
-      );
+    //  );
   }
 
 }
