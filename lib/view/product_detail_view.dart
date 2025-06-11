@@ -67,7 +67,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
 
   void _next() {
     setState(() {
-      if (currentIndex < pr.image.length -1) {
+      if (currentIndex < pr.image!.length -1) {
         currentIndex++;
       } else {
         currentIndex = currentIndex;
@@ -115,12 +115,12 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                   child:
                   Container(
                   width: double.infinity,
-                  height: 250,
+                  height: 140,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image:
                           //AssetImage(products[currentIndex][0]),
-                          NetworkImage(pr.image[currentIndex]),
+                          NetworkImage(pr.image![currentIndex]),
                           fit: BoxFit.contain
                       )
                   ),
@@ -171,7 +171,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                           children: [
                             const SizedBox(height: 20),
                             FadeInUp(duration: const Duration(milliseconds: 800), // Product Name
-                                child: Text(pr.title,
+                                child: Text(pr.title!,
                                   style: TextStyle(
                                       color: Colors.grey[800],
                                       fontSize: 18,
@@ -205,7 +205,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                               duration: const Duration(milliseconds: 800),
                               child:
                               //Html(data:"<p>Hello <b>Flutter</b><p>"),
-                              Text(pr.description)
+                              Text(pr.description!)
                                 //HtmlWidget(pr.description)
 
                             )
@@ -253,7 +253,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
 
   List<Widget> _buildIndicator() {
     List<Widget> indicators = [];
-    for(int i = 0; i < pr.image.length; i++) {
+    for(int i = 0; i < pr.image!.length; i++) {
       if (currentIndex == i) {
         indicators.add(_indicator(true));
       } else {

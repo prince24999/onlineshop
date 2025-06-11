@@ -17,9 +17,9 @@ class ProductItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    String imageLink = product.image;
-    String title = product.title;
-    String des = product.description;
+    String? imageLink = product.image;
+    String? title = product.title;
+    String? des = product.description;
 
     return
 
@@ -42,7 +42,7 @@ class ProductItemView extends StatelessWidget {
               children: [
                 FadeInImage.assetNetwork(
                   placeholder: 'assets/images/loading.gif',
-                  image: imageLink,
+                  image: imageLink!,
                   height: 150,
                   width: 300,
                   fit: BoxFit.cover,
@@ -63,7 +63,7 @@ class ProductItemView extends StatelessWidget {
                       child:
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
-                        child: Text(title,
+                        child: Text(title!,
                           style: const TextStyle(
                               fontFamily: "cc",
                               fontSize: 14,

@@ -5,49 +5,69 @@
 import 'dart:convert';
 import 'dart:ffi';
 
-import 'package:onlineshop/model/rating.dart';
 
-List<Product> productFromJson(String str) => List<Product>.from(json.decode(str).map((x) => Product.fromJson(x)));
 
-String productToJson(List<Product> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Product {
+  int? id;
+  String? title;
+  Float? price;
+  String? description;
+  String? category;
+  String? image;
+  Rating? rating;
 
-  int id;
-  String title;
-  Double price;
-  String description;
-  String category;
-  String image;
-  Rating rating;
+  Product(
+      {this.id,
+        this.title,
+        this.price,
+        this.description,
+        this.category,
+        this.image,
+        this.rating});
 
-  Product({
-    required this.id,
-    required this.title,
-    required this.price,
-    required this.description,
-    required this.category,
-    required this.image,
-    required this.rating
-  });
+  Product.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    title = json['title'];
+    //price = json['price'];
+    description = json['description'];
+    category = json['category'];
+    image = json['image'];
+    rating =
+    json['rating'] != null ? new Rating.fromJson(json['rating']) : null;
+  }
 
-  factory Product.fromJson(Map<String, dynamic> json) => Product(
-    id: json["id"],
-    title: json["title"],
-    price: json["price"],
-    description: json["description"],
-    category: json["category"],
-    image: json["image"],
-    rating: json["rating"],
-  );
-
-  Map<String, dynamic> toJson() => {
-    "id": id,
-    "title": title,
-    "price": price,
-    "description": description,
-    "category": category,
-    "image":image,
-    "rating":rating
-  };
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data['title'] = this.title;
+    //data['price'] = this.price;
+    data['description'] = this.description;
+    data['category'] = this.category;
+    data['image'] = this.image;
+    if (this.rating != null) {
+      data['rating'] = this.rating!.toJson();
+    }
+    return data;
+  }
 }
+
+class Rating {
+  double? rate;
+  int? count;
+
+  Rating({this.rate, this.count});
+
+  Rating.fromJson(Map<String, dynamic> json) {
+    rate = json['rate'];
+    count = json['count'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['rate'] = this.rate;
+    data['count'] = this.count;
+    return data;
+  }
+}
+
