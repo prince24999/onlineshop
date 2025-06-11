@@ -67,7 +67,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
 
   void _next() {
     setState(() {
-      if (currentIndex < pr.images.length -1) {
+      if (currentIndex < pr.image.length -1) {
         currentIndex++;
       } else {
         currentIndex = currentIndex;
@@ -120,7 +120,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                       image: DecorationImage(
                           image:
                           //AssetImage(products[currentIndex][0]),
-                          NetworkImage(pr.images[currentIndex]),
+                          NetworkImage(pr.image[currentIndex]),
                           fit: BoxFit.contain
                       )
                   ),
@@ -253,7 +253,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
 
   List<Widget> _buildIndicator() {
     List<Widget> indicators = [];
-    for(int i = 0; i < pr.images.length; i++) {
+    for(int i = 0; i < pr.image.length; i++) {
       if (currentIndex == i) {
         indicators.add(_indicator(true));
       } else {

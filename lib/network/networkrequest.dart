@@ -1,10 +1,12 @@
 import 'dart:convert';
+import 'dart:ffi';
 import 'package:http/http.dart' as http;
+import 'package:onlineshop/model/rating.dart';
 import '../model/product.dart';
 import '../model/raw_product.dart';
 
 class NetworkRequest {
-  static const String baseProductOfCat = 'https://dummyjson.com/products/category/';
+  static const String baseProductOfCat = 'https://fakestoreapi.com/products/category/';
 
   static String productToJson(List<Product> data) =>
       json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -21,15 +23,13 @@ class NetworkRequest {
           .map((e) => Product(
           id: e['id'] as int,
           title: e['title'] as String,
+          price: e['price'] as Double,
           description: e['description'] as String,
-          price: e['price'] as int,
-          discountPercentage: e['discountPercentage'] as double,
-          rating: e['rating'] as double,
-          stock: e['stock'] as int,
-          brand: e['brand'] as String,
           category: e['category'] as String,
-          thumbnail: e['thumbnail'] as String,
-          images: e['images']?.cast<String>()))
+          image: e['image'] as String,
+          rating: e['rating'] as Rating
+
+          ))
           .toList();
       print(listProduct);
       return listProduct;

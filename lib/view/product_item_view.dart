@@ -17,7 +17,7 @@ class ProductItemView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    String imageLink = product.thumbnail;
+    String imageLink = product.image;
     String title = product.title;
     String des = product.description;
 
